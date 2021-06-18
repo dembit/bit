@@ -36,8 +36,8 @@ export const Content: FC<Props> = () => {
     return {
       props: {
         style: prev && +text > +prev ? lowStyle :
-          prev && +text < +prev ? largerStyle : {}
-        // index % 2 ? { background: "#f6f6f6" } : {}
+          prev && +text < +prev ? largerStyle : 
+          index % 2 ? { background: "#f6f6f6" } : {}
       },
       children: <div>{text}</div>
     };
