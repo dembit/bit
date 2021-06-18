@@ -179,7 +179,7 @@ export const Content: FC<Props> = () => {
   return <>
     <Row style={{ padding: "10px" }}>
       <Col span={12}>
-        <p>Реализация таблицы приходящих данных по websoket</p>
+        <p>Реализация таблицы приходящих данных по websoket(BitcoinApi)</p>
         <p>Инструменты:</p>
         <p>Saga для получения данных(Websoket)</p>
         <p>Typescript</p>
@@ -187,7 +187,7 @@ export const Content: FC<Props> = () => {
         <p>AntDesign</p>
       </Col>
       <Col span={12}>
-        <p>Еable for getting data(Websoket)</p>
+        <p>Table for getting data(Websoket, BitcoinApi)</p>
         <p>Tools:</p>
         <p>Saga get data(Websoket)</p>
         <p>Typescript</p>
