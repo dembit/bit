@@ -14,7 +14,9 @@ function* connect() {
     type: ActionType.WS_SEND_MESSAGE,
     value: {
       method: "getSymbols",
-      params: {},
+      params: {
+        limit: 10
+      },
       id: 1,
     },
   });
@@ -53,7 +55,7 @@ function* message(action: any) {
         
     })
 
-    console.log(index, "index")
+    
     if(index !== -1) {
       yield put(setSingleCurrencies({currency: res, index}))
       return
@@ -64,7 +66,7 @@ function* message(action: any) {
 
   if (id === 1 && result) {
     let res: Tiker[] = result;
-    yield put(setTikers(res));
+    yield put(setTikers(res.slice(0, 20)));
     yield all(
       res.map(function (item, i) {
         if (i > 20) {
